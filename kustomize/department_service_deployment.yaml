@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: department
+  namespace: springapp
   labels:
     app: department
 spec:
@@ -40,6 +41,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: department
+  namespace: springapp
   labels:
     app: department
     spring-boot: "true"
