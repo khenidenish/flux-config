@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- admin_service_deployment.yaml
+- department_service_deployment.yaml
+- employee_service_deployment.yaml
+- gateway_service_deployment.yaml
+- ingress.yaml
+- mongodb-configmap.yaml
+- mongodb-deployment.yaml
+- mongodb-secret.yaml
+- org_service_deployment.yaml
+- privileges.yaml
