@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: employee
+  namespace: springapp
   labels:
     app: employee
 spec:
@@ -40,6 +41,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: employee
+  namespace: springapp
   labels:
     app: employee
     spring-boot: "true"
