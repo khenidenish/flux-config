@@ -1,15 +1,13 @@
-Flag --validation has been deprecated, this arg is no longer used, all resources are validated using server-side apply dry-run
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: podinfo
-  namespace: flux-system
-spec:
-  interval: 5m0s
-  path: ./kustomize
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: podinfo
-
+resources:
+- ./kustomize/admin_service_deployment.yaml
+- ./kustomize/department_service_deployment.yaml
+- ./kustomize/employee_service_deployment.yaml
+- ./kustomize/gateway_service_deployment.yaml
+- ./kustomize/ingress.yaml
+- ./kustomize/mongodb-configmap.yaml
+- ./kustomize/mongodb-deployment.yaml
+- ./kustomize/mongodb-secret.yaml
+- ./kustomize/org_service_deployment.yaml
+- ./kustomize/privileges.yaml
